@@ -1,0 +1,10 @@
+#!/system/bin/sh
+#remount rw
+mount -o rw,remount /dev/block/stl9 /system
+mount -o rw,remount rootfs /
+# mount internal sd
+busybox mount -t vfat /dev/block/mmcblk0p1 /mnt/sdcard
+# mount external sd
+busybox mount -t vfat /dev/block/mmcblk1p1 /mnt/sdcard/external_sd
+#UMS
+busybox echo /dev/block/mmcblk0 > /sys/devices/platform/s3c-usbgadget/gadget/lun1/file
