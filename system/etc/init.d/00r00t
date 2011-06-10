@@ -1,0 +1,5 @@
+#!/system/bin/sh
+#remount rw
+mount -o rw,remount /dev/block/stl9 /system
+mount -o rw,remount rootfs /
+/system/xbin/busybox --install -s /system/xbin

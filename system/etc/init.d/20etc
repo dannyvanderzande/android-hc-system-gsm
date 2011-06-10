@@ -1,0 +1,2 @@
+#!/system/bin/sh
+echo 0 > /data/property/persist.sys.strictmode.visual
